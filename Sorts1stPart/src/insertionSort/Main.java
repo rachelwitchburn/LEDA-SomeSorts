@@ -1,5 +1,4 @@
 package insertionSort;
-import java.util.Arrays;
 
 public class Main {
 
@@ -37,9 +36,26 @@ public class Main {
 			vetor[i] = (int) (Math.random() * vetor.length);
 		}
 		
-		System.out.println("Vetor desordenado: ");
-		System.out.println(Arrays.toString(vetor));
-		System.out.println("Vetor ordenado: "+Arrays.toString(insertionSort(vetor)));
+		System.out.println("Lista desordenada: ");
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i]);
+			if (i < vetor.length - 1) {
+				System.out.print(", ");
+
+			}
+		}
+		System.out.println();
+		insertionSort(vetor);
+		System.out.println("Lista ordenada: ");
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i]);
+			if (i < vetor.length - 1) {
+				System.out.print(", ");
+
+			}
+		}
+		
 	}
+	
 
 }

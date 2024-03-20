@@ -38,8 +38,25 @@ public class Main {
 			
 		}
 		System.out.println("Lista desordenada: ");
-		System.out.println(Arrays.toString(vetor));
-		System.out.println("Lista ordenada: "+ Arrays.toString(selectionSort(vetor)));
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i]);
+			if (i < vetor.length - 1) {
+				System.out.print(", ");
+
+			}
+		}
+		System.out.println();
+		selectionSort(vetor);
+		System.out.println("Lista ordenada: ");
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i]);
+			if (i < vetor.length - 1) {
+				System.out.print(", ");
+
+			}
+		}
+		
 	}
+	
 
 }

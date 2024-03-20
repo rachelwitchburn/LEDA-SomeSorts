@@ -1,7 +1,5 @@
 package bubbleSort;
 
-import java.util.Arrays;
-
 public class Main {
 	public static int[] bubbleSort(int[] vetor) {
 		int trocas = 0;
@@ -33,14 +31,29 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		int [] vetor = new int [100];
+		int [] vetor = new int [10];
 		for (int i = 0; i < vetor.length; i++) {
 			vetor[i] = (int) (Math.random() * vetor.length);
 		}
 		System.out.println("Lista desordenada: ");
-		System.out.println(Arrays.toString(vetor));
-		System.out.println("Lista ordenada: "+ Arrays.toString(bubbleSort(vetor)));
-		//int [] vetor = {2, 9, 3, 8, 7, 2, 1, 6, 9};
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i]);
+			if (i < vetor.length - 1) {
+				System.out.print(", ");
+
+			}
+		}
+		System.out.println();
+		bubbleSort(vetor);
+		System.out.println("Lista ordenada: ");
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i]);
+			if (i < vetor.length - 1) {
+				System.out.print(", ");
+
+			}
+		}
+		
 	}
 
 }
